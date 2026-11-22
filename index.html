@@ -4,53 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nombre de la Dependencia | Universidad Autónoma de Sinaloa</title>
+  
   <!-- Tipografía institucional: Roboto Condensed (Light 300, Regular 400, Bold 700) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Enlace a tu hoja de estilos -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ==================== 1. HEADER (CABEZA) ==================== -->
   <header class="uas-header">
     
-    <!-- Banda principal (120px alto en escritorio / contenedor central de 1080px) -->
+    <!-- Banda principal -->
     <div class="header-principal">
       <div class="header-contenedor">
         
-        <!-- Escudo oficial de la UAS (contenedor tipo romboide) -->
+        <!-- Escudo oficial de la UAS -->
         <div class="escudo-uas">
           <a href="#">
-            <img src="ruta/escudo-uas.png" alt="Escudo Universidad Autónoma de Sinaloa">
+            <img src="Imagenes/LogoUAs.png" alt="Escudo Universidad Autónoma de Sinaloa">
           </a>
         </div>
 
-        <!-- Nombre de la dependencia (a la izquierda si hay logo de dependencia; centrado si no hay) -->
+        <!-- Nombre de la dependencia -->
         <div class="nombre-dependencia">
-          <h1>Nombre de la Dependencia</h1>
+          <h1>Dirección General de Comunicación Social</h1>
         </div>
 
-        <!-- Marca gráfica de la dependencia (Opcional) -->
+        <!-- Marca gráfica de la dependencia (elige logo_fic.png o logo_administracion.png) -->
         <div class="marca-dependencia">
-          <img src="ruta/logo-dependencia.png" alt="Logotipo de la Dependencia">
+          <img src="Imagenes/logo_fic.png" alt="Logotipo de la Dependencia">
+          <!-- Alternativa: <img src="Imagenes/logo_administracion.png" alt="Logotipo Administración"> -->
         </div>
 
-        <!-- Marca gráfica de la gestión (UAS con Visión de Futuro) -->
+        <!-- Marca gráfica de la gestión (UAS con Visión de Futuro 2025) -->
         <div class="marca-gestion">
-          <img src="ruta/marca-gestion-uas.png" alt="UAS con Visión de Futuro">
+          <img src="Imagenes/Logovision2025.png" alt="UAS con Visión de Futuro 2025">
         </div>
 
       </div>
     </div>
 
-    <!-- Franja institucional intermedia (30px alto en escritorio) -->
+    <!-- Franja institucional intermedia -->
     <div class="header-franja-universidad">
       <div class="header-contenedor">
         <span>UNIVERSIDAD AUTÓNOMA DE SINALOA</span>
       </div>
     </div>
 
-    <!-- Barra de navegación (40px alto en escritorio) -->
+    <!-- Barra de navegación -->
     <nav class="uas-nav" aria-label="Menú principal">
       <div class="header-contenedor">
         
@@ -76,26 +81,25 @@
   </header>
 
   <!-- ==================== 2. BODY / MAIN (CUERPO) ==================== -->
-  <!-- El contenido interno es flexible según la dependencia; esta estructura sigue el diagrama base -->
   <main class="uas-main">
 
-    <!-- Sección 1: Banner principal / Hero -->
-    <section class="seccion-hero">
+    <!-- Sección 1: Banner principal / Hero (usa CuadroconFondoUAS.png como fondo institucional) -->
+    <section class="seccion-hero" style="background-image: url('Imagenes/CuadroconFondoUAS.png'); background-size: cover; background-position: center;">
       <div class="contenido-hero">
         <h2>Título principal destacado</h2>
         <p>Subtítulo o descripción breve de apoyo</p>
       </div>
     </section>
 
-    <!-- Sección 2: Bloque informativo a dos columnas (Texto + Imagen/Recurso) -->
-    <section class="seccion-destacada">
+    <!-- Sección 2: Bloque informativo a dos columnas (usa CuadroconFondoBlanco.png como marca de agua) -->
+    <section class="seccion-destacada" style="background-image: url('Imagenes/CuadroconFondoBlanco.png'); background-size: cover; background-position: center;">
       <div class="columna-texto">
         <h2>Título de la sección</h2>
         <p>Párrafo informativo principal de la dependencia.</p>
         <p>Segundo párrafo de desarrollo.</p>
       </div>
       <div class="columna-media">
-        <img src="ruta/imagen-destacada.jpg" alt="Descripción de la imagen">
+        <!-- Espacio para imagen o recurso multimedia -->
       </div>
     </section>
 
@@ -123,7 +127,7 @@
       </article>
     </section>
 
-    <!-- Sección 4: Dos bloques inferiores (Avisos / Banners secundarios) -->
+    <!-- Sección 4: Dos bloques inferiores -->
     <section class="seccion-bloques-inferiores">
       <article class="bloque-inferior">
         <!-- Contenido o banner izquierdo -->
@@ -136,12 +140,11 @@
   </main>
 
   <!-- ==================== 3. FOOTER (PIE) ==================== -->
-  <!-- Alto fijo de 60px y ancho variable al 100% de la pantalla -->
   <footer class="uas-footer">
     
     <!-- Escudo de la Universidad a la izquierda -->
     <div class="footer-escudo">
-      <img src="ruta/escudo-uas.png" alt="Escudo UAS">
+      <img src="Imagenes/LogoUAs.png" alt="Escudo UAS">
     </div>
 
     <!-- Franja central con lema institucional -->
@@ -151,7 +154,7 @@
 
     <!-- Marca gráfica de la gestión a la derecha -->
     <div class="footer-marca-gestion">
-      <img src="ruta/marca-gestion-uas.png" alt="UAS con Visión de Futuro">
+      <img src="Imagenes/Logovision2025.png" alt="UAS con Visión de Futuro 2025">
     </div>
 
   </footer>
