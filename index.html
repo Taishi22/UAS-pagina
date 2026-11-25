@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facultad de Informática Culiacán | Universidad Autónoma de Sinaloa</title>
+
+  <!-- Tipografía institucional: Roboto Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. HEADER (CABEZA) ==================== -->
+  <header class="uas-header">
+
+    <!-- Banda principal blanca -->
+    <div class="header-principal">
+      <div class="header-contenedor">
+
+        <!-- Bloque izquierdo: Escudo + Textos institucionales -->
+        <div class="header-identidad">
+          <div class="escudo-uas">
+            <a href="#inicio" aria-label="Inicio">
+              <img src="Imagenes/LogoUAs.png" alt="Escudo Universidad Autónoma de Sinaloa">
+            </a>
+          </div>
+          <div class="nombre-dependencia">
+            <span class="subtitulo-uas">UNIVERSIDAD AUTÓNOMA DE SINALOA</span>
+            <h1>Facultad de Informática Culiacán</h1>
+          </div>
+        </div>
+
+        <!-- Bloque derecho: Logo FIC -->
+        <div class="header-logos-derechos">
+          <div class="marca-dependencia">
+            <a href="#inicio" aria-label="Inicio Facultad de Informática Culiacán">
+              <img src="Imagenes/logo_fic.png" alt="Facultad de Informática Culiacán">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Franja institucional intermedia dorada -->
+    <div class="header-franja-universidad">
+      <div class="header-contenedor">
+        <span>SURSUM VERSUS</span>
+      </div>
+    </div>
+
+    <!-- Barra de navegación azul marino con submenús y buscador -->
+    <nav class="uas-nav" aria-label="Menú principal">
+      <div class="header-contenedor nav-flex">
+
+        <!-- Botón hamburguesa para vista móvil -->
+        <button type="button" class="btn-menu-movil" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Enlaces de navegación -->
+        <ul id="menu-principal" class="nav-lista">
+          <li><a href="#inicio" data-buscar="inicio facultad uas">INICIO</a></li>
+
+          <li class="tiene-submenu">
+            <button type="button" class="btn-submenu" aria-expanded="false">
+              LA FACULTAD <span class="flecha">▾</span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#nosotros" data-buscar="nosotros historia mision vision">Nosotros</a></li>
+              <li><a href="#directorio" data-buscar="directorio contacto autoridad">Directorio</a></li>
+              <li><a href="#secretaria-academica" data-buscar="secretaria academica tramites">Secretaría Académica</a></li>
+            </ul>
+          </li>
+
+          <li class="tiene-submenu">
+            <button type="button" class="btn-submenu" aria-expanded="false">
+              ACADÉMICO <span class="flecha">▾</span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#programacion-academica" data-buscar="programacion academica materias horarios carreras">Programación Académica</a></li>
+              <li><a href="#aula-virtual" data-buscar="aula virtual moodle cursos">Aula Virtual FIC</a></li>
+              <li><a href="#fic-virtual" data-buscar="fic virtual plataforma">FIC Virtual</a></li>
+            </ul>
+          </li>
+
+          <li class="tiene-submenu">
+            <button type="button" class="btn-submenu" aria-expanded="false">
+              SERVICIOS <span class="flecha">▾</span>
+            </button>
+            <ul class="submenu">
+              <li><a href="#correo-institucional" data-buscar="correo institucional email cuenta">Correo Institucional</a></li>
+              <li><a href="#noticias" data-buscar="noticias convocatorias eventos">Noticias y Convocatorias</a></li>
+              <li><a href="#convocatorias" data-buscar="convocatorias becas registros">Convocatorias</a></li>
+              <li><a href="#eventos" data-buscar="eventos actividades conferencias">Eventos</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#contacto" data-buscar="contacto ubicacion culiacan">CONTACTO</a></li>
+        </ul>
+
+        <!-- Botón y barra desplegable de búsqueda -->
+        <div class="nav-buscador">
+          <button type="button" id="btn-toggle-busqueda" class="btn-buscar" aria-label="Abrir buscador" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Barra de búsqueda desplegable -->
+      <div id="barra-busqueda" class="barra-busqueda" hidden>
+        <form id="form-busqueda" class="header-contenedor form-busqueda">
+          <input
+            type="search"
+            id="input-busqueda"
+            class="input-busqueda"
+            placeholder="Buscar en la página (ej. programación, directorio, correo, aula virtual)..."
+            aria-label="Buscar en la página"
+            autocomplete="off"
+          >
+          <button type="submit" class="btn-enviar-busqueda">Buscar</button>
+          <button type="button" id="btn-cerrar-busqueda" class="btn-cerrar-busqueda" aria-label="Cerrar buscador">✕</button>
+        </form>
+        <div id="resultados-busqueda" class="header-contenedor resultados-busqueda"></div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main id="inicio" class="uas-main">
+
+    <!-- Sección 1: Banner principal / Hero -->
+    <section class="seccion-hero" style="background-image: url('Imagenes/UASINS.png'); background-size: cover; background-position: center;">
+      <div class="contenido-hero">
+        <h2>UNIVERSIDAD AUTÓNOMA DE SINALOA</h2>
+      </div>
+    </section>
+
+    <!-- ==================== SECCIÓN DE NOTICIAS ==================== -->
+    <section class="seccion-noticias" id="noticias">
+
+      <div class="titulo-noticias">
+        <h2>NOTICIAS</h2>
+      </div>
+
+      <div class="contenedor-noticias">
+
+        <!-- Noticia 1 -->
+        <article class="tarjeta-noticia">
+          <img src="Imagenes/noticia1.jpg" alt="Concurso de Programación">
+
+          <h3>Concurso de Programación</h3>
+
+          <p>
+            Estudiantes de la Facultad de Informática participan en
+            competencias de programación, demostrando sus conocimientos,
+            habilidades y creatividad para resolver problemas.
+          </p>
+        </article>
+
+        <!-- Noticia 2 -->
+        <article class="tarjeta-noticia">
+          <img src="Imagenes/noticia2.jpg" alt="Taller de Tecnologías Emergentes">
+
+          <h3>Taller de Tecnologías Emergentes</h3>
+
+          <p>
+            La Facultad de Informática promueve espacios de aprendizaje
+            para que los estudiantes conozcan nuevas herramientas y
+            tendencias relacionadas con las tecnologías emergentes.
+          </p>
+        </article>
+
+        <!-- Noticia 3 -->
+        <article class="tarjeta-noticia">
+          <img src="Imagenes/noticia3.jpg" alt="Vinculación con empresas">
+
+          <h3>Vinculación con Empresas</h3>
+
+          <p>
+            La Universidad Autónoma de Sinaloa fortalece la vinculación
+            laboral de sus estudiantes mediante oportunidades de empleo,
+            como la solicitud de personal de la empresa Coppel.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== SECCIÓN DE ACTIVIDADES ==================== -->
+    <section id="actividades" class="seccion-noticias">
+
+      <div class="titulo-noticias">
+        <h2>ACTIVIDADES</h2>
+      </div>
+
+      <div class="contenedor-noticias">
+
+        <!-- Actividad 1 -->
+        <article class="tarjeta-noticia">
+          <img src="Imagenes/actividad1.jpg" alt="Actividad universitaria 1">
+
+          <p>
+            Espacio para presentar información sobre las actividades
+            académicas y estudiantiles de la Facultad de Informática.
+          </p>
+        </article>
+
+        <!-- Actividad 2 -->
+        <article class="tarjeta-noticia">
+          <img src="Imagenes/actividad2.jpg" alt="Actividad universitaria 2">
+
+          <p>
+            Participación de los estudiantes en eventos y actividades
+            que contribuyen a su formación profesional.
+          </p>
+        </article>
+
+        <!-- Actividad 3 -->
+        <article class="tarjeta-noticia">
+          <img src="Imagenes/actividad3.jpg" alt="Actividad universitaria 3">
+
+          <p>
+            Actividades realizadas por la comunidad universitaria
+            para fomentar el aprendizaje y la convivencia.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== SECCIÓN DE CONVOCATORIAS ==================== -->
+    <section id="convocatorias" class="seccion-convocatorias">
+
+      <!-- Banner de referencia estilo UAS -->
+      <div class="banner-convocatorias-eventos" style="background-image: url('Imagenes/banner_convocatorias_eventos.jpg');">
+        <div class="banner-convocatorias-eventos__overlay">
+          <h2>CONVOCATORIAS Y EVENTOS</h2>
+        </div>
+      </div>
+
+      <div class="contenedor-convocatorias-bloque">
+        <div class="titulo-noticias">
+          <h2>CONVOCATORIAS</h2>
+        </div>
+
+        <!-- Barra de filtros de mes y año -->
+        <div class="barra-filtros-periodo" aria-label="Filtrar convocatorias por mes y año">
+          <label for="filtro-mes-convocatorias" class="sr-only">Mes</label>
+          <select id="filtro-mes-convocatorias" class="select-periodo">
+            <option value="todos">TODOS LOS MESES</option>
+            <option value="noviembre" selected>NOVIEMBRE</option>
+            <option value="octubre">OCTUBRE</option>
+            <option value="septiembre">SEPTIEMBRE</option>
+          </select>
+
+          <label for="filtro-anio-convocatorias" class="sr-only">Año</label>
+          <select id="filtro-anio-convocatorias" class="select-periodo">
+            <option value="2026" selected>2026</option>
+            <option value="2025">2025</option>
+          </select>
+        </div>
+
+        <!-- Cuadrícula de 4 convocatorias estilo cartel -->
+        <div class="grid-convocatorias">
+
+          <!-- Convocatoria 1 -->
+          <article class="tarjeta-convocatoria" data-mes="noviembre" data-anio="2026">
+            <img src="Imagenes/convocatoria1.jpg" alt="Convocatoria Jornada Institucional de Autoevaluación Docente">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · Autoevaluación Docente</h3>
+              <p>Consulta los lineamientos, fechas y requisitos para participar en el proceso institucional del periodo vigente.</p>
+            </div>
+          </article>
+
+          <!-- Convocatoria 2 -->
+          <article class="tarjeta-convocatoria" data-mes="noviembre" data-anio="2026">
+            <img src="Imagenes/convocatoria2.jpg" alt="Convocatoria H. Consejo Universitario">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · H. Consejo Universitario</h3>
+              <p>Información oficial sobre sesiones, acuerdos y participación de la comunidad universitaria de la UAS.</p>
+            </div>
+          </article>
+
+          <!-- Convocatoria 3 -->
+          <article class="tarjeta-convocatoria" data-mes="noviembre" data-anio="2026">
+            <img src="Imagenes/convocatoria3.jpg" alt="Convocatoria Evaluación al Desempeño Docente">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · Evaluación Docente</h3>
+              <p>Participación estudiantil y docente para fortalecer la calidad académica en la Facultad de Informática Culiacán.</p>
+            </div>
+          </article>
+
+          <!-- Convocatoria 4 -->
+          <article class="tarjeta-convocatoria" data-mes="octubre" data-anio="2026">
+            <img src="Imagenes/convocatoria4.jpg" alt="Convocatoria Becas y Movilidad Estudiantil FIC">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · Becas y Apoyos FIC</h3>
+              <p>Registro y documentación requerida para estudiantes interesados en programas de apoyo y movilidad.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SECCIÓN DE EVENTOS ==================== -->
+    <section id="eventos" class="seccion-noticias seccion-eventos-fic">
+
+      <div class="titulo-noticias">
+        <h2>EVENTOS</h2>
+      </div>
+
+      <div class="contenedor-noticias">
+
+        <!-- Evento 1 -->
+        <article class="tarjeta-noticia tarjeta-evento">
+          <img src="Imagenes/evento1.jpg" alt="Semana de la Informática y Tecnología">
+
+          <h3>Semana de la Informática y Tecnología</h3>
+
+          <p>
+            Conferencias magistrales, paneles y muestras de proyectos
+            desarrollados por estudiantes y docentes de la Facultad de
+            Informática Culiacán.
+          </p>
+        </article>
+
+        <!-- Evento 2 -->
+        <article class="tarjeta-noticia tarjeta-evento">
+          <img src="Imagenes/evento2.jpg" alt="Hackathon y Competencia de Desarrollo de Software">
+
+          <h3>Hackathon y Desarrollo de Software</h3>
+
+          <p>
+            Jornada colaborativa donde equipos estudiantiles diseñan
+            soluciones tecnológicas aplicando programación, bases de datos
+            y trabajo en equipo.
+          </p>
+        </article>
+
+        <!-- Evento 3 -->
+        <article class="tarjeta-noticia tarjeta-evento">
+          <img src="Imagenes/evento3.jpg" alt="Feria de Vinculación y Charlas Técnicas">
+
+          <h3>Feria de Vinculación y Charlas Técnicas</h3>
+
+          <p>
+            Encuentro con egresados y especialistas del sector tecnológico
+            para compartir experiencias profesionales y oportunidades de
+            inserción laboral.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contacto" class="fic-footer">
+    <div class="fic-footer__contenido">
+      <section class="fic-footer__columna" aria-labelledby="fic-contacto">
+        <h2 id="fic-contacto" class="fic-footer__titulo">Contacto</h2>
+        <p class="fic-footer__nombre">Facultad de Informática Culiacán</p>
+        <ul class="fic-footer__datos">
+          <li><span aria-hidden="true">⌖</span><span>Ciudad Universitaria, Culiacán, Sinaloa, México.</span></li>
+          <li><span aria-hidden="true">☎</span><span>Teléfono: 6677161361</span></li>
+          <li><span aria-hidden="true">✉</span><span>Correo institucional: info@info.uas.edu.mx</span></li>
+        </ul>
+        <h3 class="fic-footer__subtitulo">Síguenos</h3>
+        <a class="fic-footer__facebook" href="https://www.facebook.com/FICuliacan" target="_blank" rel="noopener noreferrer">
+          <span class="fic-footer__facebook-icono" aria-hidden="true">f</span> Facebook · FIC Culiacán
+        </a>
+      </section>
+
+      <section class="fic-footer__columna" aria-labelledby="fic-ubicacion">
+        <h2 id="fic-ubicacion" class="fic-footer__titulo">Nuestra ubicación</h2>
+        <p>Visítanos en Ciudad Universitaria.</p>
+        <div class="fic-footer__mapa">
+          <iframe title="Ubicación de la Facultad de Informática Culiacán en Google Maps"
+            src="https://www.google.com/maps?q=Facultad%20de%20Inform%C3%A1tica%20Culiac%C3%A1n%2C%20Ciudad%20Universitaria%2C%20Culiac%C3%A1n%2C%20Sinaloa&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <a class="fic-footer__como-llegar" href="https://www.google.com/maps/search/?api=1&query=Facultad+de+Inform%C3%A1tica+Culiac%C3%A1n"
+          target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+      </section>
+
+      <section class="fic-footer__columna" aria-labelledby="fic-formulario">
+        <h2 id="fic-formulario" class="fic-footer__titulo">Formulario de contacto</h2>
+        <p>Completa los campos para preparar tu mensaje.</p>
+        <form class="fic-footer__formulario" action="#" method="post">
+          <div class="fic-footer__campo">
+            <label for="fic-nombre">Nombre</label>
+            <input id="fic-nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+          </div>
+          <div class="fic-footer__campo">
+            <label for="fic-correo">Correo electrónico</label>
+            <input id="fic-correo" name="correo" type="email" placeholder="tunombre@ejemplo.com" required>
+          </div>
+          <div class="fic-footer__campo">
+            <label for="fic-mensaje">Mensaje</label>
+            <textarea id="fic-mensaje" name="mensaje" rows="3" placeholder="Escribe tu mensaje..." required></textarea>
+          </div>
+          <button type="submit">Enviar mensaje</button>
+          <p class="fic-footer__nota">Potenciado por Universidad Autónoma de Sinaloa.</p>
+        </form>
+      </section>
+    </div>
+
+    <div class="fic-footer__institucional">
+      <div class="fic-footer__marcas">
+        <img src="Imagenes/LogoUAs.png" alt="Escudo de la Universidad Autónoma de Sinaloa">
+        <p><em>Sursum Versus</em><span>Universidad Autónoma de Sinaloa · Facultad de Informática Culiacán</span></p>
+        <img src="Imagenes/Logovision2025.png" alt="UAS con Visión de Futuro 2025">
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FUNCIONALIDADES DE NAVEGACIÓN ==================== -->
+  <script>
+    // 1. Menú hamburguesa en móvil
+    const btnMovil = document.querySelector('.btn-menu-movil');
+    const navLista = document.querySelector('.nav-lista');
+
+    btnMovil.addEventListener('click', () => {
+      const expandido = btnMovil.getAttribute('aria-expanded') === 'true';
+      btnMovil.setAttribute('aria-expanded', String(!expandido));
+      navLista.classList.toggle('activo');
+    });
+
+    // 2. Submenús desplegables (clic en móvil/teclado + cierre al hacer clic fuera y al navegar)
+    const itemsSubmenu = document.querySelectorAll('.tiene-submenu');
+
+    function cerrarSubmenus() {
+      itemsSubmenu.forEach((item) => {
+        item.classList.remove('abierto');
+        const boton = item.querySelector('.btn-submenu');
+        if (boton) boton.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    itemsSubmenu.forEach((item) => {
+      const boton = item.querySelector('.btn-submenu');
+      boton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const estaAbierto = item.classList.contains('abierto');
+        cerrarSubmenus();
+
+        if (!estaAbierto) {
+          item.classList.add('abierto');
+          boton.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.tiene-submenu')) {
+        cerrarSubmenus();
+      }
+    });
+
+    // Cierra menú móvil y submenús al seleccionar un enlace interno
+    document.querySelectorAll('.nav-lista a[href^="#"]').forEach((enlace) => {
+      enlace.addEventListener('click', () => {
+        cerrarSubmenus();
+        navLista.classList.remove('activo');
+        btnMovil.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // 3. Buscador desplegable con filtrado en tiempo real sobre apartados de la página
+    const btnToggleBusqueda = document.getElementById('btn-toggle-busqueda');
+    const barraBusqueda = document.getElementById('barra-busqueda');
+    const btnCerrarBusqueda = document.getElementById('btn-cerrar-busqueda');
+    const formBusqueda = document.getElementById('form-busqueda');
+    const inputBusqueda = document.getElementById('input-busqueda');
+    const resultadosBusqueda = document.getElementById('resultados-busqueda');
+
+    const enlacesBuscables = Array.from(document.querySelectorAll('.nav-lista a[href^="#"]')).map((a) => ({
+      texto: a.textContent.trim(),
+      href: a.getAttribute('href'),
+      keywords: (a.getAttribute('data-buscar') || '').toLowerCase()
+    }));
+
+    function renderResultados(termino) {
+      const q = termino.trim().toLowerCase();
+      if (!q) {
+        resultadosBusqueda.innerHTML = '';
+        return;
+      }
+
+      const coincidencias = enlacesBuscables.filter(
+        (item) => item.texto.toLowerCase().includes(q) || item.keywords.includes(q)
+      );
+
+      if (coincidencias.length === 0) {
+        resultadosBusqueda.innerHTML = `<p class="sin-resultados">No se encontraron apartados para "<strong>${termino}</strong>".</p>`;
+        return;
+      }
+
+      resultadosBusqueda.innerHTML = coincidencias
+        .map(
+          (item) => `
+          <a class="resultado-item" href="${item.href}">
+            ${item.texto}
+          </a>
+        `
+        )
+        .join('');
+
+      resultadosBusqueda.querySelectorAll('.resultado-item').forEach((link) => {
+        link.addEventListener('click', () => {
+          barraBusqueda.setAttribute('hidden', '');
+          btnToggleBusqueda.setAttribute('aria-expanded', 'false');
+          inputBusqueda.value = '';
+          resultadosBusqueda.innerHTML = '';
+        });
+      });
+    }
+
+    btnToggleBusqueda.addEventListener('click', () => {
+      const estaOculta = barraBusqueda.hasAttribute('hidden');
+      if (estaOculta) {
+        barraBusqueda.removeAttribute('hidden');
+        btnToggleBusqueda.setAttribute('aria-expanded', 'true');
+        inputBusqueda.focus();
+      } else {
+        barraBusqueda.setAttribute('hidden', '');
+        btnToggleBusqueda.setAttribute('aria-expanded', 'false');
+        inputBusqueda.value = '';
+        resultadosBusqueda.innerHTML = '';
+      }
+    });
+
+    btnCerrarBusqueda.addEventListener('click', () => {
+      barraBusqueda.setAttribute('hidden', '');
+      btnToggleBusqueda.setAttribute('aria-expanded', 'false');
+      inputBusqueda.value = '';
+      resultadosBusqueda.innerHTML = '';
+    });
+
+    inputBusqueda.addEventListener('input', (e) => {
+      renderResultados(e.target.value);
+    });
+
+    formBusqueda.addEventListener('submit', (e) => {
+      e.preventDefault();
+      renderResultados(inputBusqueda.value);
+      const primerEnlace = resultadosBusqueda.querySelector('.resultado-item');
+      if (primerEnlace) {
+        primerEnlace.click();
+      }
+    });
+
+    // 4. Filtro de mes y año en Convocatorias
+    const selectMesConvocatorias = document.getElementById('filtro-mes-convocatorias');
+    const selectAnioConvocatorias = document.getElementById('filtro-anio-convocatorias');
+    const tarjetasConvocatorias = document.querySelectorAll('.tarjeta-convocatoria');
+
+    function filtrarConvocatorias() {
+      if (!selectMesConvocatorias || !selectAnioConvocatorias) return;
+      const mesSeleccionado = selectMesConvocatorias.value;
+      const anioSeleccionado = selectAnioConvocatorias.value;
+
+      tarjetasConvocatorias.forEach((tarjeta) => {
+        const coincideMes = mesSeleccionado === 'todos' || tarjeta.dataset.mes === mesSeleccionado;
+        const coincideAnio = tarjeta.dataset.anio === anioSeleccionado;
+        tarjeta.hidden = !(coincideMes && coincideAnio);
+      });
+    }
+
+    if (selectMesConvocatorias && selectAnioConvocatorias) {
+      selectMesConvocatorias.addEventListener('change', filtrarConvocatorias);
+      selectAnioConvocatorias.addEventListener('change', filtrarConvocatorias);
+    }
+  </script>
+
+</body>
+</html>
