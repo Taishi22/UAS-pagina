@@ -1174,7 +1174,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ==================== 5. FRANJA DORADA INFERIOR CON ROMBOIDES ORIGINALES ==================== */
 .fic-footer__institucional {
-  height: 84px;
+  height: 100px;
   padding: 0 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.35);
   background: linear-gradient(100deg, #b89d2b 0%, #d2bb46 100%);
