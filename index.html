@@ -97,6 +97,8 @@
             <ul class="submenu">
               <li><a href="#correo-institucional" data-buscar="correo institucional email cuenta">Correo Institucional</a></li>
               <li><a href="#noticias" data-buscar="noticias convocatorias eventos">Noticias y Convocatorias</a></li>
+              <li><a href="#convocatorias" data-buscar="convocatorias becas registros">Convocatorias</a></li>
+              <li><a href="#eventos" data-buscar="eventos actividades conferencias">Eventos</a></li>
             </ul>
           </li>
 
@@ -286,6 +288,134 @@
           <p>
             Actividades realizadas por la comunidad universitaria
             para fomentar el aprendizaje y la convivencia.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== 7. SECCIÓN DE CONVOCATORIAS ==================== -->
+    <section id="convocatorias" class="seccion-convocatorias">
+
+      <!-- Banner de referencia estilo UAS -->
+      <div class="banner-convocatorias-eventos" style="background-image: url('Imagenes/banner_convocatorias_eventos.jpg');">
+        <div class="banner-convocatorias-eventos__overlay">
+          <h2>CONVOCATORIAS Y EVENTOS</h2>
+        </div>
+      </div>
+
+      <div class="contenedor-convocatorias-bloque">
+        <div class="titulo-noticias">
+          <h2>CONVOCATORIAS</h2>
+        </div>
+
+        <!-- Barra de filtros de mes y año como en la referencia -->
+        <div class="barra-filtros-periodo" aria-label="Filtrar convocatorias por mes y año">
+          <label for="filtro-mes-convocatorias" class="sr-only">Mes</label>
+          <select id="filtro-mes-convocatorias" class="select-periodo">
+            <option value="todos">TODOS LOS MESES</option>
+            <option value="noviembre" selected>NOVIEMBRE</option>
+            <option value="octubre">OCTUBRE</option>
+            <option value="septiembre">SEPTIEMBRE</option>
+          </select>
+
+          <label for="filtro-anio-convocatorias" class="sr-only">Año</label>
+          <select id="filtro-anio-convocatorias" class="select-periodo">
+            <option value="2026" selected>2026</option>
+            <option value="2025">2025</option>
+          </select>
+        </div>
+
+        <!-- Cuadrícula de 4 convocatorias estilo cartel -->
+        <div class="grid-convocatorias">
+
+          <!-- Convocatoria 1 -->
+          <article class="tarjeta-convocatoria" data-mes="noviembre" data-anio="2026">
+            <img src="Imagenes/convocatoria1.jpg" alt="Convocatoria Jornada Institucional de Autoevaluación Docente">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · Autoevaluación Docente</h3>
+              <p>Consulta los lineamientos, fechas y requisitos para participar en el proceso institucional del periodo vigente.</p>
+            </div>
+          </article>
+
+          <!-- Convocatoria 2 -->
+          <article class="tarjeta-convocatoria" data-mes="noviembre" data-anio="2026">
+            <img src="Imagenes/convocatoria2.jpg" alt="Convocatoria H. Consejo Universitario">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · H. Consejo Universitario</h3>
+              <p>Información oficial sobre sesiones, acuerdos y participación de la comunidad universitaria de la UAS.</p>
+            </div>
+          </article>
+
+          <!-- Convocatoria 3 -->
+          <article class="tarjeta-convocatoria" data-mes="noviembre" data-anio="2026">
+            <img src="Imagenes/convocatoria3.jpg" alt="Convocatoria Evaluación al Desempeño Docente">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · Evaluación Docente</h3>
+              <p>Participación estudiantil y docente para fortalecer la calidad académica en la Facultad de Informática Culiacán.</p>
+            </div>
+          </article>
+
+          <!-- Convocatoria 4 -->
+          <article class="tarjeta-convocatoria" data-mes="octubre" data-anio="2026">
+            <img src="Imagenes/convocatoria4.jpg" alt="Convocatoria Becas y Movilidad Estudiantil FIC">
+            <div class="tarjeta-convocatoria__cuerpo">
+              <h3>Convocatoria · Becas y Apoyos FIC</h3>
+              <p>Registro y documentación requerida para estudiantes interesados en programas de apoyo y movilidad.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== 8. SECCIÓN DE EVENTOS ==================== -->
+    <section id="eventos" class="seccion-noticias seccion-eventos-fic">
+
+      <div class="titulo-noticias">
+        <h2>EVENTOS</h2>
+      </div>
+
+      <div class="contenedor-noticias">
+
+        <!-- Evento 1 -->
+        <article class="tarjeta-noticia tarjeta-evento">
+          <img src="Imagenes/evento1.jpg" alt="Semana de la Informática y Tecnología">
+
+          <h3>Semana de la Informática y Tecnología</h3>
+
+          <p>
+            Conferencias magistrales, paneles y muestras de proyectos
+            desarrollados por estudiantes y docentes de la Facultad de
+            Informática Culiacán.
+          </p>
+        </article>
+
+        <!-- Evento 2 -->
+        <article class="tarjeta-noticia tarjeta-evento">
+          <img src="Imagenes/evento2.jpg" alt="Hackathon y Competencia de Desarrollo de Software">
+
+          <h3>Hackathon y Desarrollo de Software</h3>
+
+          <p>
+            Jornada colaborativa donde equipos estudiantiles diseñan
+            soluciones tecnológicas aplicando programación, bases de datos
+            y trabajo en equipo.
+          </p>
+        </article>
+
+        <!-- Evento 3 -->
+        <article class="tarjeta-noticia tarjeta-evento">
+          <img src="Imagenes/evento3.jpg" alt="Feria de Vinculación y Charlas Técnicas">
+
+          <h3>Feria de Vinculación y Charlas Técnicas</h3>
+
+          <p>
+            Encuentro con egresados y especialistas del sector tecnológico
+            para compartir experiencias profesionales y oportunidades de
+            inserción laboral.
           </p>
         </article>
 
@@ -488,6 +618,28 @@
         primerEnlace.click();
       }
     });
+
+    // 4. Filtro de mes y año en Convocatorias
+    const selectMesConvocatorias = document.getElementById('filtro-mes-convocatorias');
+    const selectAnioConvocatorias = document.getElementById('filtro-anio-convocatorias');
+    const tarjetasConvocatorias = document.querySelectorAll('.tarjeta-convocatoria');
+
+    function filtrarConvocatorias() {
+      if (!selectMesConvocatorias || !selectAnioConvocatorias) return;
+      const mesSeleccionado = selectMesConvocatorias.value;
+      const anioSeleccionado = selectAnioConvocatorias.value;
+
+      tarjetasConvocatorias.forEach((tarjeta) => {
+        const coincideMes = mesSeleccionado === 'todos' || tarjeta.dataset.mes === mesSeleccionado;
+        const coincideAnio = tarjeta.dataset.anio === anioSeleccionado;
+        tarjeta.hidden = !(coincideMes && coincideAnio);
+      });
+    }
+
+    if (selectMesConvocatorias && selectAnioConvocatorias) {
+      selectMesConvocatorias.addEventListener('change', filtrarConvocatorias);
+      selectAnioConvocatorias.addEventListener('change', filtrarConvocatorias);
+    }
   </script>
 
 </body>
